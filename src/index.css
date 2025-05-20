@@ -13,7 +13,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -33,9 +33,10 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  background: #ffffff;
 }
 
 h1 {
@@ -86,6 +87,29 @@ button:focus-visible {
   width: 100%;
 }
 
+.btn-gold {
+  background-color: var(--gold-secondary) !important;
+  color: white !important;
+  border: 2px solid transparent !important;
+  font-family: 'Montserrat', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  min-height: 48px; /* reduced height */
+  width: 100%;
+  max-width: 32rem; /* match max-w-2xl (hero paragraph width) */
+  padding: 1rem 2rem; /* slightly less padding */
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.btn-gold:hover {
+  background-color: black !important;
+  color: var(--gold-secondary) !important;
+}
 
 @media (max-width: 900px) {
   .nav-links {
