@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../assets/images/iyerslogo.jpg';
 import { FaBars } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ onMenuClick }) => {
   return (
@@ -16,24 +17,24 @@ const Navbar = ({ onMenuClick }) => {
       {/* Links on the right (desktop) */}
       <ul className="hidden lg:flex gap-4 sm:gap-6 md:gap-8 nav-links">
         <li>
-          <a href="#" style={{ color: 'var(--gold-primary)' }} className="text-base sm:text-lg font-black font-montserrat relative group nav-link">
+          <Link to="/" style={{ color: 'var(--gold-primary)' }} className="text-base sm:text-lg font-black font-montserrat relative group nav-link">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" style={{ color: 'var(--gold-primary)' }} className="text-base sm:text-lg font-black font-montserrat relative group nav-link">
+          <Link to="/about" style={{ color: 'var(--gold-primary)' }} className="text-base sm:text-lg font-black font-montserrat relative group nav-link">
             About Us
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" style={{ color: 'var(--gold-primary)' }} className="text-base sm:text-lg font-black font-montserrat relative group nav-link">
+          <Link to="/menu" style={{ color: 'var(--gold-primary)' }} className="text-base sm:text-lg font-black font-montserrat relative group nav-link">
             Menu
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" style={{ color: 'var(--gold-primary)' }} className="text-base sm:text-lg font-black font-montserrat relative group nav-link">
+          <Link to="/contact" style={{ color: 'var(--gold-primary)' }} className="text-base sm:text-lg font-black font-montserrat relative group nav-link">
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
       {/* Hamburger menu icon (mobile/tablet) */}
