@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = ({ onMenuClick }) => {
   return (
-    <nav className="w-full flex flex-col" style={{ backgroundColor: '#e9e8e7' }}>
+    <nav className="w-full flex flex-col fixed top-0 left-0 z-50" style={{ backgroundColor: '#e9e8e7' }}>
       <div className="flex items-center justify-between px-2 sm:px-4 md:px-6 py-2 sm:py-4 md:py-6">
         {/* Logo and tagline on the left, responsive */}
         <div className="iyers-logo-title pl-8">
@@ -46,13 +46,20 @@ const Navbar = ({ onMenuClick }) => {
             </Link>
           </li>
           <li>
-            <Link
-              to="/contact"
+            <a
+              href="#contact"
               className="text-base sm:text-lg font-black font-montserrat relative group nav-link"
               style={{ color: 'var(--gold-secondary)', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
+              onClick={e => {
+                e.preventDefault();
+                const section = document.getElementById('contact');
+                if (section) {
+                  section.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               Contact
-            </Link>
+            </a>
           </li>
         </ul>
         {/* Hamburger menu icon (mobile/tablet) */}

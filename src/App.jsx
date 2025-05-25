@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -12,8 +13,8 @@ function App() {
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/menu" element={<MenuPlaceholder />} />
-        <Route path="/about" element={<AboutPlaceholder />} />
         {/* Add more routes for Contact, etc. */}
       </Routes>
     </Router>
@@ -23,9 +24,6 @@ function App() {
 // Simple placeholder components for Menu and About
 function MenuPlaceholder() {
   return <div style={{padding:'4rem',textAlign:'center'}}><h1>Menu Page Coming Soon</h1></div>;
-}
-function AboutPlaceholder() {
-  return <div style={{padding:'4rem',textAlign:'center'}}><h1>About Page Coming Soon</h1></div>;
 }
 
 export default App;

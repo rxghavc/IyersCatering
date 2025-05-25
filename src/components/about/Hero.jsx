@@ -1,27 +1,25 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import bananaLeafImg from '../../assets/images/rotiwsambhar.jpg';
-import samosasImg from '../../assets/images/samosas.jpg';
-import laddusImg from '../../assets/images/laddus.jpg';
-import drinksImg from '../../assets/images/drinks.jpg';
+import spice1Img from '../../assets/images/spice-1.jpg';
+import spice2Img from '../../assets/images/spice-2.jpg';
+import spice3Img from '../../assets/images/spice-3.jpg';
+import spice4Img from '../../assets/images/spice-4.jpg';
 
 const carouselImages = [
-  { src: bananaLeafImg, alt: 'Banana Leaf with Food' },
-  { src: samosasImg, alt: 'Samosas' },
-  { src: laddusImg, alt: 'Laddus' },
-  { src: drinksImg, alt: 'Drinks' }, // swapped in drinks instead of roti (white image)
+  { src: spice1Img, alt: 'Spice 1' },
+  { src: spice2Img, alt: 'Spice 2' },
+  { src: spice3Img, alt: 'Spice 3' },
+  { src: spice4Img, alt: 'Spice 4' },
 ];
 
-const HomeHero = () => {
-  const navigate = useNavigate();
+const AboutHero = () => {
   const [current, setCurrent] = useState(0);
 
   // Carousel auto-advance
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % carouselImages.length);
-    }, 5000); // changed from 5000 to 8000 for slower auto-advance
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
@@ -67,23 +65,8 @@ const HomeHero = () => {
           filter: 'blur(2px)',
         }} />
       </div>
-      {/* Text under carousel */}
-      <div className="max-w-2xl mx-auto flex flex-col justify-center items-center text-center mt-8 px-4">
-        <p className="text-base md:text-lg text-gray-800 font-fira mb-2">
-          <span className="font-extrabold text-black">Welcome to Iyers Catering</span> – A business specialising in preparing authentic and homemade vegetarian Indian food, sweets & savouries for all kind of events, birthdays, family functions. We offer a wide range of delicious and authentic dishes that are perfect for your events and occasions.
-        </p>
-        <button
-          className="btn-gold mt-6 mb-12"
-          onClick={() => navigate('/menu')}
-        >
-          Explore Menu
-        </button>
-        <p className="text-base md:text-lg text-gray-800 font-fira mb-2 text-center">
-          At Iyers, we take pride in delivering exquisite culinary experiences. Our passion for blending flavours and creating unforgettable dishes sets us apart.
-        </p>
-      </div>
     </section>
   );
 };
 
-export default HomeHero;
+export default AboutHero;
