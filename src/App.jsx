@@ -12,10 +12,20 @@ function App() {
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Add more routes for About, Menu, Contact, etc. */}
+        <Route path="/menu" element={<MenuPlaceholder />} />
+        <Route path="/about" element={<AboutPlaceholder />} />
+        {/* Add more routes for Contact, etc. */}
       </Routes>
     </Router>
   );
+}
+
+// Simple placeholder components for Menu and About
+function MenuPlaceholder() {
+  return <div style={{padding:'4rem',textAlign:'center'}}><h1>Menu Page Coming Soon</h1></div>;
+}
+function AboutPlaceholder() {
+  return <div style={{padding:'4rem',textAlign:'center'}}><h1>About Page Coming Soon</h1></div>;
 }
 
 export default App;
