@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutHero from '../components/about/Hero';
+import AboutHero from '../components/about/SpiceCarosel';
 
 const AboutUs = () => {
   return (
