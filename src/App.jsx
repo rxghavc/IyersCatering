@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
+import MenuPage from './pages/Menu';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -14,16 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/menu" element={<MenuPlaceholder />} />
-        {/* Add more routes for Contact, etc. */}
+        <Route path="/menu" element={<MenuPage />} />
       </Routes>
     </Router>
   );
-}
-
-// Simple placeholder components for Menu and About
-function MenuPlaceholder() {
-  return <div style={{padding:'4rem',textAlign:'center'}}><h1>Menu Page Coming Soon</h1></div>;
 }
 
 export default App;
