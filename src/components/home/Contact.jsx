@@ -37,10 +37,10 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-20 bg-white">
-      <div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row gap-10 bg-white rounded-xl shadow-lg border p-8"
+      <div className="w-full max-w-5xl mx-auto flex flex-col-reverse md:flex-row gap-10 bg-white rounded-xl shadow-lg border p-8"
         style={{ borderColor: 'var(--gold-secondary)', boxShadow: '0 4px 6px var(--gold-secondary)' }}
       >
-        {/* Info text on the left */}
+        {/* Info text on the left (now below on mobile) */}
         <div className="md:w-1/2 flex flex-col justify-center mb-8 md:mb-0 md:pr-8" style={{ fontFamily: 'Fira Code, monospace', color: '#111' }}>
           <p className="text-base md:text-lg mb-6 font-fira">
             Let us elevate your next event with our top-notch catering services. Reach out to us to discuss your catering needs and start planning an unforgettable experience.
@@ -49,7 +49,7 @@ export default function Contact() {
             For orders & enquiries, please contact Iyers at <span className="font-bold">07738904569</span> or <span className="font-bold">07488369652</span> or email us at <a href="mailto:contact@iyers.co.uk" className="underline hover:text-[var(--gold-secondary)]">contact@iyers.co.uk</a>
           </p>
         </div>
-        {/* Contact form on the right */}
+        {/* Contact form on the right (now above on mobile) */}
         <div className="md:w-1/2 w-full">
           <h2 className="text-3xl font-bold mb-6 text-center text-black md:text-center">Contact Us</h2>
           <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
