@@ -4,6 +4,16 @@ import { FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ onMenuClick }) => {
+  React.useEffect(() => {
+    if (window.location.hash === '#contact' && sessionStorage.getItem('scrollToContact')) {
+      const section = document.getElementById('contact');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        sessionStorage.removeItem('scrollToContact');
+      }
+    }
+  }, []);
+
   return (
     <nav className="w-full flex flex-col fixed top-0 left-0 z-50" style={{ backgroundColor: '#e9e8e7' }}>
       <div className="flex items-center justify-between px-2 sm:px-4 md:px-6 py-2 sm:py-4 md:py-6">
@@ -47,14 +57,20 @@ const Navbar = ({ onMenuClick }) => {
           </li>
           <li>
             <a
-              href="#contact"
+              href="/#contact"
               className="text-base sm:text-lg font-black font-montserrat relative group nav-link"
               style={{ color: 'var(--gold-secondary)', fontFamily: 'Montserrat, Arial, Helvetica, sans-serif' }}
               onClick={e => {
                 e.preventDefault();
-                const section = document.getElementById('contact');
-                if (section) {
-                  section.scrollIntoView({ behavior: 'smooth' });
+                if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+                  const section = document.getElementById('contact');
+                  if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                  }
+                } else {
+                  // Set a flag in sessionStorage to trigger scroll after navigation
+                  sessionStorage.setItem('scrollToContact', 'true');
+                  window.location.href = '/#contact';
                 }
               }}
             >
