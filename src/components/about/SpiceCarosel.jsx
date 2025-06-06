@@ -24,9 +24,9 @@ const AboutHero = () => {
   }, []);
 
   return (
-    <section className="w-full min-h-[60vh] flex flex-col items-center justify-start pt-32 pb-12 px-0 bg-white">
-      {/* Full-width Carousel */}
-      <div className="relative w-full aspect-[4/1] max-h-[480px] overflow-hidden shadow-2xl" style={{marginTop: 0}}>
+    <section className="w-full">
+      {/* Carousel container with same aspect ratio and height as Hero.jsx */}
+      <div className="relative w-full aspect-[4/1] max-h-[480px] overflow-hidden shadow-2xl">
         {carouselImages.map((img, idx) => (
           <img
             key={img.alt}
@@ -55,15 +55,9 @@ const AboutHero = () => {
           <FaChevronRight size={26} style={{strokeWidth: 1.5}} />
         </button>
       </div>
-      {/* TV-style shadow under carousel */}
-      <div className="w-full flex justify-center -mt-4 mb-8 pointer-events-none select-none">
-        <div style={{
-          width: '60%',
-          height: '32px',
-          borderRadius: '50%',
-          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.10) 60%, rgba(0,0,0,0.01) 100%)',
-          filter: 'blur(2px)',
-        }} />
+      {/* TV shadow with less aggressive margin */}
+      <div className="w-full flex justify-center mt-[-8px] mb-4 pointer-events-none select-none">
+        <div className="w-[60%] h-6 bg-gradient-to-b from-black/20 to-transparent rounded-[50%] blur-[2px]" />
       </div>
     </section>
   );

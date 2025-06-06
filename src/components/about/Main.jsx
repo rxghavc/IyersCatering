@@ -2,15 +2,20 @@ import React from 'react';
 import foodHygieneImg from '../../assets/images/foodhygienerating.jpeg';
 
 const AboutMain = () => (
-  <section className="w-full flex flex-col items-center justify-center px-4 py-12 bg-white">
-    <div className="max-w-3xl w-full mx-auto text-justify">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black font-montserrat text-center">About Us</h2>
-      <p className="text-base md:text-lg text-gray-900 font-fira mb-6">
-        Iyers catering is a business specialising in preparing authentic and homemade vegetarian Indian food sweets, savouries, for all kind of events, birthdays, family functions. We offer a wide range of delicious and authentic dishes that are perfect for events and occasions. We are officially registered with Royal Borough of Windsor and Maidenhead Council, and we have been given a 5 Star Food Hygiene Rating. We hold Level 2 – Food Hygiene and Safety Certification.
-        <span className="block w-full my-4 text-center">
-          <img src={foodHygieneImg} alt="5 Star Food Hygiene Rating" className="w-1/2 max-w-xs h-auto rounded shadow border border-gray-200 mx-auto" />
-        </span>
-      </p>
+  <section className="w-full flex flex-col items-center justify-center px-4 py-4 bg-white relative">
+    <div className="max-w-3xl w-full mx-auto">
+      <h2 className="text-3xl md:text-4xl font-bold mb-8 text-black font-montserrat text-center">About Us</h2>
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 mb-8">
+        <img
+          src={foodHygieneImg}
+          alt="5 Star Food Hygiene Rating"
+          className="w-2/3 md:w-1/3 max-w-xs h-auto rounded shadow border border-gray-200 mx-auto md:mx-0"
+        />
+        <p className="text-base md:text-lg text-gray-900 font-fira text-justify md:text-left">
+          Iyers Catering specialises in authentic, homemade vegetarian Indian food for all kinds of events. We are officially registered with the Royal Borough of Windsor and Maidenhead Council and have a 5 Star Food Hygiene Rating.
+        </p>
+      </div>
+      {/* Remaining about content below */}
       <p className="text-base md:text-lg text-gray-900 font-fira mb-6">
         Our Head Chef, Akila started catering from home as a hobby in 2014, and she has since then been catering for several events, birthdays, functions & occasions. Akila is very talented with skills, attentive and makes sure that customer’s order is taken care of and delivered on time. Since inception, she has had a good customer base over the last 10 years and felt the need to expand this service more broadly under the banner of Iyers.
       </p>
