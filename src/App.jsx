@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
-import MenuPage from './pages/Menu';
+// import MenuPage from './pages/Menu';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/menu" element={<MenuPage />} />
+        {/* <Route path="/menu" element={<MenuPage />} /> */}
       </Routes>
     </Router>
   );
