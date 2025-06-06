@@ -9,11 +9,11 @@ A modern, responsive React web application for Iyers Catering, featuring a custo
 - **Custom theming** with gold-accented palette and Montserrat/Fira Code fonts.
 - **Dynamic navigation**: Responsive Navbar and Sidebar for seamless navigation on all devices.
 - **Hero and Carousel sections**: Visually rich carousels on Home, About, Menu, Food, and Contact pages.
-- **Menu and Food pages**: Interactive cards and category-based food listings, including sweets, savouries, and spices.
+- **Menu and Food pages**: Interactive cards and category-based food listings, including mains, sweets, savouries, and spices.
 - **About Us**: Company story, chef bio, and food hygiene rating.
-- **Contact page**: Carousel, contact form (first name, last name, email, message) with backend email sending via Nodemailer.
+- **Contact page**: Carousel, contact form (first name, last name, email, message) with required field asterisks, no placeholders, wide layout, and backend email sending via Nodemailer. Email notifications feature a centered, branded card with the Iyers logo.
 - **Scroll-to-top button** and polished Footer with social links.
-- **Backend API**: Express server with `/api/contact` endpoint, sending emails using Gmail credentials from `.env`.
+- **Backend API**: Express server with `/api/contact` endpoint, sending visually branded emails using Gmail credentials from `.env`.
 - **Production-ready**: ESLint config, environment variable support, and easy deployment.
 
 ## Project Structure
@@ -90,10 +90,22 @@ Visit [http://localhost:5173](http://localhost:5173) (or the port Vite shows) to
 - **About Us**: Company story, chef bio, and food hygiene rating.
 - **Menu**: Catering services as interactive cards.
 - **Food**: Category-based food listing (mains, sweets, savouries, spices).
-- **Contact**: Carousel and contact form (sends email via backend).
+- **Contact**: Carousel and contact form (sends email via backend). All fields are required (marked with a red asterisk), there are no placeholders, and the form is wide and modern.
 
 ## Customization
 
 - **Images**: Replace images in `src/assets/images/` as needed.
 - **Menu/Food**: Edit `src/components/food/Main.jsx` and `src/components/menu/Menu.jsx` for menu items.
 - **Contact Email**: Change the recipient in `api/contact.js` (`to: 'r.commandur@gmail.com'`).
+- **Contact Form Layout**: Adjust width, required field indicators, and input styles in `src/components/contact/ContactSection..jsx`.
+- **Email Branding**: Update the logo or card style in `api/contact.js` and `src/assets/images/iyerslogo.jpg`.
+
+## Screenshots
+
+> Add screenshots of the Home, Menu, Food, About, and Contact pages here for a visual overview.
+
+---
+
+## License
+
+This project is for demonstration and portfolio use. For commercial use, please contact the author.
