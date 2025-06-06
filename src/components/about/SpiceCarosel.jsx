@@ -26,7 +26,7 @@ const AboutHero = () => {
   return (
     <section className="w-full">
       {/* Carousel container with same aspect ratio and height as Hero.jsx */}
-      <div className="relative w-full aspect-[4/1] max-h-[300px] overflow-hidden shadow-2xl">
+      <div className="relative w-full aspect-[4/1] max-h-[400px] overflow-hidden shadow-2xl">
         {carouselImages.map((img, idx) => (
           <img
             key={img.alt}
