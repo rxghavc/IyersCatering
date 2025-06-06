@@ -1,12 +1,99 @@
-# React + Vite
+# Iyers Catering
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive React web application for Iyers Catering, featuring a custom theme, beautiful carousels, dynamic menu and food sections, and a working contact form with backend email integration.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Modern React + Vite** frontend with Tailwind CSS for rapid styling and responsiveness.
+- **Custom theming** with gold-accented palette and Montserrat/Fira Code fonts.
+- **Dynamic navigation**: Responsive Navbar and Sidebar for seamless navigation on all devices.
+- **Hero and Carousel sections**: Visually rich carousels on Home, About, Menu, Food, and Contact pages.
+- **Menu and Food pages**: Interactive cards and category-based food listings, including sweets, savouries, and spices.
+- **About Us**: Company story, chef bio, and food hygiene rating.
+- **Contact page**: Carousel, contact form (first name, last name, email, message) with backend email sending via Nodemailer.
+- **Scroll-to-top button** and polished Footer with social links.
+- **Backend API**: Express server with `/api/contact` endpoint, sending emails using Gmail credentials from `.env`.
+- **Production-ready**: ESLint config, environment variable support, and easy deployment.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```
+IyersCatering/
+├── api/                  # Express API route for contact form (Nodemailer)
+│   └── contact.js
+├── src/
+│   ├── assets/images/    # All images used in carousels, menu, etc.
+│   ├── components/
+│   │   ├── about/        # About page components (Main, SpiceCarosel)
+│   │   ├── contact/      # Contact page components (ContactCarosel, ContactSection)
+│   │   ├── food/         # Food page components (FoodCarosel, Main)
+│   │   ├── home/         # Home page components (Hero, Information, Contact)
+│   │   ├── menu/         # Menu page components (Carosel, Menu)
+│   │   ├── misc/         # Footer, ScrollToTopButton
+│   │   ├── Navbar.jsx, Sidebar.jsx
+│   ├── pages/            # Page-level components for routing
+│   ├── App.jsx           # Main app with React Router
+│   ├── index.css         # Tailwind and custom CSS
+│   ├── main.jsx          # React entry point
+├── server.js             # Express server for API routes
+├── .env                  # Email credentials for Nodemailer
+├── package.json
+├── vite.config.js        # Vite + Tailwind config
+├── README.md
+└── index.html
+```
+
+## Setup & Development
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm
+
+### 1. Install dependencies
+
+```powershell
+npm install
+```
+
+### 2. Environment variables
+
+Create a `.env` file in the project root with your Gmail credentials:
+
+```
+EMAIL_USER=yourgmail@gmail.com
+EMAIL_PASS=your-app-password
+```
+
+> **Note:** Use an [App Password](https://support.google.com/accounts/answer/185833) if you have 2FA enabled.
+
+### 3. Start the backend server
+
+```powershell
+node server.js
+```
+
+This runs the Express server on [http://localhost:3001](http://localhost:3001) for the contact form API.
+
+### 4. Start the frontend (Vite)
+
+```powershell
+npm run dev
+```
+
+Visit [http://localhost:5173](http://localhost:5173) (or the port Vite shows) to view the site.
+
+## Usage
+
+- **Home**: Hero carousel, information cards, and quick contact.
+- **About Us**: Company story, chef bio, and food hygiene rating.
+- **Menu**: Catering services as interactive cards.
+- **Food**: Category-based food listing (mains, sweets, savouries, spices).
+- **Contact**: Carousel and contact form (sends email via backend).
+
+## Customization
+
+- **Images**: Replace images in `src/assets/images/` as needed.
+- **Menu/Food**: Edit `src/components/food/Main.jsx` and `src/components/menu/Menu.jsx` for menu items.
+- **Contact Email**: Change the recipient in `api/contact.js` (`to: 'r.commandur@gmail.com'`).
