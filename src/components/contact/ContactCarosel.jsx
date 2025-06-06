@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import spice1Img from '../../assets/images/spice-1.jpg';
-import spice2Img from '../../assets/images/spice-2.jpg';
-import spice3Img from '../../assets/images/spice-3.jpg';
-import spice4Img from '../../assets/images/spice-4.jpg';
+import contact1Img from '../../assets/images/contact-1.jpg';
+import contact2Img from '../../assets/images/contact-2.jpg';
+import contact3Img from '../../assets/images/contact-3.jpg';
+import contact4Img from '../../assets/images/contact-4.jpg';
 
 const carouselImages = [
-  { src: spice1Img, alt: 'Spice 1' },
-  { src: spice2Img, alt: 'Spice 2' },
-  { src: spice3Img, alt: 'Spice 3' },
-  { src: spice4Img, alt: 'Spice 4' },
+  { src: contact1Img, alt: 'Spice 1' },
+  { src: contact2Img, alt: 'Spice 2' },
+  { src: contact3Img, alt: 'Spice 3' },
+  { src: contact4Img, alt: 'Spice 4' },
 ];
 
 const ContactCarosel = () => {
@@ -26,7 +26,7 @@ const ContactCarosel = () => {
   return (
     <section className="w-full">
       {/* Carousel container with same aspect ratio and height as Hero.jsx */}
-      <div className="relative w-full aspect-[4/1] max-h-[300px] overflow-hidden shadow-2xl">
+      <div className="relative w-full aspect-[4/1] max-h-[400px] overflow-hidden shadow-2xl">
         {carouselImages.map((img, idx) => (
           <img
             key={img.alt}

@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import MenuPage from './pages/Menu';
 import FoodPage from './pages/Food';
+import Contact from './pages/Contact';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/food" element={<FoodPage />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
