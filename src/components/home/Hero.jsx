@@ -26,7 +26,7 @@ const HomeHero = () => {
   }, []);
 
   return (
-    <section className="w-full min-h-[60vh] flex flex-col items-center justify-start pt-32 pb-12 px-0 bg-white">
+    <section className="w-full min-h-[60vh] flex flex-col items-center justify-start pt-0 pb-12 px-0 bg-white">
       {/* Full-width Carousel */}
       <div className="relative w-full aspect-[4/1] max-h-[480px] overflow-hidden shadow-2xl" style={{marginTop: 0}}>
         {carouselImages.map((img, idx) => (
