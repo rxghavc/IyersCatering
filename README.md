@@ -104,4 +104,4 @@ Visit [http://localhost:5173](http://localhost:5173) (or the port Vite shows) to
 
 ## License
 
-This project is for demonstration and portfolio use. For commercial use, please contact the author.
+This project is for demonstration and portfolio use. For commercial use, please contact [Raghav Commandur](rxghavcdev@gmail.com).
