@@ -2,7 +2,7 @@ import React from 'react';
 
 const socialLinks = [
   {
-    href: 'https://facebook.com',
+    href: 'https://www.facebook.com/iyerscatering4u',
     label: 'Facebook',
     svg: (
       <svg width="28" height="28" fill="none" viewBox="0 0 24 24" className="hover:opacity-80" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +11,7 @@ const socialLinks = [
     ),
   },
   {
-    href: 'https://twitter.com',
+    href: 'https://x.com/iyerscatering',
     label: 'Twitter',
     svg: (
       <svg width="28" height="28" fill="none" viewBox="0 0 24 24" className="hover:opacity-80" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +20,7 @@ const socialLinks = [
     ),
   },
   {
-    href: 'https://instagram.com',
+    href: 'https://www.instagram.com/iyers_catering',
     label: 'Instagram',
     svg: (
       <svg width="28" height="28" fill="none" viewBox="0 0 24 24" className="hover:opacity-80" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +31,7 @@ const socialLinks = [
     ),
   },
   {
-    href: 'https://youtube.com',
+    href: 'https://www.youtube.com/@IyersCatering',
     label: 'YouTube',
     svg: (
       <svg width="28" height="28" fill="none" viewBox="0 0 24 24" className="hover:opacity-80" xmlns="http://www.w3.org/2000/svg">
