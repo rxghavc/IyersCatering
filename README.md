@@ -100,11 +100,6 @@ Visit [http://localhost:5173](http://localhost:5173) (or the port Vite shows) to
 - **Contact Form Layout**: Adjust width, required field indicators, and input styles in `src/components/contact/ContactSection..jsx`.
 - **Email Branding**: Update the logo or card style in `api/contact.js` and `src/assets/images/iyerslogo.jpg`.
 
-## Screenshots
-
-> Add screenshots of the Home, Menu, Food, About, and Contact pages here for a visual overview.
-
----
 
 ## License
 
