@@ -19,16 +19,17 @@ const ContactSection = () => {
     setLoading(true);
     setStatus('');
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('http://localhost:3001/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
+      const data = await res.json();
       if (res.ok) {
         setStatus('Thank you for contacting us! We will get back to you soon.');
         setForm({ firstName: '', lastName: '', email: '', message: '' });
       } else {
-        setStatus('Something went wrong. Please try again.');
+        setStatus(data.error || 'Something went wrong. Please try again.');
       }
     } catch {
       setStatus('Something went wrong. Please try again.');
