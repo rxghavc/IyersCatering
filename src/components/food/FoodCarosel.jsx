@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import food1Img from '../../assets/images/savouries-1.jpg';
 import food2Img from '../../assets/images/savouries-2.jpg';
-import food3Img from '../../assets/images/spices-1.jpg';
 import food4Img from '../../assets/images/sweets-1.jpg';
 import food5Img from '../../assets/images/sweets-2.jpg';
 import food6Img from '../../assets/images/sweets-3.jpg';
@@ -10,7 +9,6 @@ import food6Img from '../../assets/images/sweets-3.jpg';
 const carouselImages = [
   { src: food1Img, alt: 'Savouries 1' },
   { src: food2Img, alt: 'Savouries 2' },
-  { src: food3Img, alt: 'Spices 1' },
   { src: food4Img, alt: 'Sweets 1' },
   { src: food5Img, alt: 'Sweets 2' },
   { src: food6Img, alt: 'Sweets 3' },
@@ -30,7 +28,7 @@ const AboutHero = () => {
   return (
     <section className="w-full">
       {/* Carousel container with same aspect ratio and height as Hero.jsx */}
-      <div className="relative w-full aspect-[4/1] max-h-[480px] overflow-hidden shadow-2xl">
+      <div className="relative w-full aspect-[4/1] max-h-[300px] overflow-hidden shadow-2xl">
         {carouselImages.map((img, idx) => (
           <img
             key={img.alt}
