@@ -6,10 +6,6 @@ import sweetsImg from '../../assets/images/sweets.jpg';
 const Information = () => {
   return (
     <>
-      {/* Top horizontal line divider */}
-      <div className="w-full flex justify-center">
-        <hr style={{ border: 'none', borderTop: '3px solid #111', width: '75vw', maxWidth: '1200px', margin: '32px 0 0 0', borderRadius: '2px' }} />
-      </div>
       <section className="relative w-full">
         {/* Responsive flex for cards/images */}
         <div className="relative z-10 w-full mx-auto mt-16 flex flex-col md:flex-row gap-6 md:gap-10 px-2 sm:px-4 pb-8 items-stretch">
@@ -33,9 +29,11 @@ const Information = () => {
           </div>
         </div>
       </section>
-      {/* Bottom horizontal line divider */}
-      <div className="w-full flex justify-center">
-        <hr style={{ border: 'none', borderTop: '3px solid #111', width: '75vw', maxWidth: '1200px', margin: '0 0 32px 0', borderRadius: '2px' }} />
+      {/* Bottom SVG tilt triangle divider */}
+      <div className="w-full" style={{ lineHeight: 0 }}>
+        <svg width="100%" height="120" viewBox="0 0 100 6" preserveAspectRatio="none" style={{ display: 'block' }}>
+          <polygon points="0,6 0,0 100,0" fill="#fff" />
+        </svg>
       </div>
     </>
   );
