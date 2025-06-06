@@ -15,7 +15,7 @@ const Navbar = ({ onMenuClick }) => {
   }, []);
 
   return (
-    <nav className="fixed w-full flex flex-col top-0 left-0 z-50" style={{ backgroundColor: '#e9e8e7' }}>
+    <nav className="w-full flex flex-col top-0 left-0 right-0" style={{ backgroundColor: '#e9e8e7' }}>
       <div className="flex items-center justify-between px-2 sm:px-4 md:px-6 py-2 sm:py-4 md:py-6">
         {/* Logo and tagline on the left, responsive */}
         <div className="iyers-logo-title pl-8">
