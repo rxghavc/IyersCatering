@@ -5,6 +5,7 @@ import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import MenuPage from './pages/Menu';
+import FoodPage from './pages/Food';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/menu" element={<MenuPage />} />
+        <Route path="/food" element={<FoodPage />} />
       </Routes>
     </Router>
   );
