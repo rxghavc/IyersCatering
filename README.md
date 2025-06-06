@@ -64,6 +64,7 @@ Create a `.env` file in the project root with your Gmail credentials:
 ```
 EMAIL_USER=yourgmail@gmail.com
 EMAIL_PASS=your-app-password
+EMAIL_TO=emails-sent-to-location
 ```
 
 > **Note:** Use an [App Password](https://support.google.com/accounts/answer/185833) if you have 2FA enabled.
